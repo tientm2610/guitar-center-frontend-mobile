@@ -1,0 +1,68 @@
+<!-- res/layout/activity_main.xml -->
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gridLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="2"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- TextView "Quản lý sản phẩm" -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="2"
+        android:text="Quản lý sản phẩm"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:paddingBottom="16dp"/>
+
+    <!-- SearchView -->
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="2"
+        android:queryHint="Tìm kiếm sản phẩm"
+        android:iconifiedByDefault="false" />
+
+    <!-- Nút "Thêm sản phẩm" -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        >
+    <Button
+        android:id="@+id/buttonAddProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thêm sản phẩm"
+        android:layout_column="1"
+        android:layout_gravity="end" />
+    <Button
+        android:id="@+id/buttonReload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reload"
+        android:layout_column="1"
+        android:layout_gravity="end"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:textStyle="bold"
+        android:textColor="#f70622"/>
+    </LinearLayout>
+    <!-- ListView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="389dp"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:layout_columnSpan="2"
+        android:background="#FFFFFF"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:padding="8dp"
+        />
+
+</GridLayout>

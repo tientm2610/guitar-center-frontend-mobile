@@ -1,0 +1,135 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="5"
+        android:orientation="horizontal">
+
+        <!-- Hình ảnh sản phẩm -->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/product1"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:layout_columnSpan="1"
+            android:scaleType="centerCrop"/>
+
+        <!-- Cột chứa các tiêu đề và nội dung -->
+        <GridLayout
+            android:layout_width="295dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:columnCount="2"
+            android:paddingStart="16dp"
+            android:rowCount="5">
+
+            <!-- Tiêu đề và nội dung ID -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:text="ID:"
+                android:textStyle="bold" />
+
+            <!-- Tiêu đề và nội dung Tên sản phẩm -->
+            <TextView
+                android:id="@+id/textViewID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_gravity=""
+                android:text="123456789" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:text="Tên:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:text="Nguyễn Vĩnh Quang" />
+
+            <!-- Tiêu đề và nội dung Unit -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:text="Unit:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:text="M" />
+
+            <!-- Tiêu đề và nội dung Price -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="3"
+                android:layout_column="0"
+                android:text="Price:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="3"
+                android:layout_column="1"
+                android:text="$100" />
+
+            <!-- Tiêu đề và mô tả -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="4"
+                android:layout_column="0"
+                android:text="Mô tả:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="4"
+                android:layout_column="1"
+                android:text="Mô tả sản phẩm..." />
+            <Button
+                android:id="@+id/buttonDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Xóa" />
+
+            <!-- Nút Sửa -->
+            <Button
+                android:id="@+id/buttonEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sửa" />
+        </GridLayout>
+    </GridLayout>
+</LinearLayout>
